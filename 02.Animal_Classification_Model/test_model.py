@@ -31,4 +31,11 @@ saver.restore(sess,tf.train.latest_checkpoint('./models/'))
 
 prediction_result = model._prediction_(test_x,test_y)
 
-print(prediction_result)
+prediction_result = model._prediction_(test_x,test_y)
+
+sub = pd.DataFrame()
+sub['Animal_name'] = test_name
+sub['Predict_Type'] = prediction_result
+sub['Origin_Type'] = test_y
+
+print(sub)
