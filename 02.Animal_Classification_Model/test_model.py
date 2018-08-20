@@ -21,6 +21,8 @@ test_name = test_x['animal_name']
 train_x = train_x.iloc[:,1:]
 test_x = test_x.iloc[:,1:]
 
+sess = tf.Session()
+
 model = animal_classifier(sess) 
 
 saver = tf.train.Saver()
