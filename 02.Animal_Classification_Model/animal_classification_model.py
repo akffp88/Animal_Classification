@@ -70,3 +70,7 @@ class animal_classifier :
     def _prediction_(self,animal_input,label_input): #학습된 모델을 이용하여 예측하기
         test_predict = self.sess.run(self.prediction, feed_dict={self.X: animal_input,self.Y: label_input})
         return test_predict
+    
+    def _correction_(self,animal_input,label_input): #학습된 모델을 이용하여 예측하기
+        test_correct = self.sess.run(self.correct_prediction, feed_dict={self.X: animal_input,self.Y: label_input})
+        return test_correct

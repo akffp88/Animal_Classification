@@ -33,9 +33,12 @@ prediction_result = model._prediction_(test_x,test_y)
 
 prediction_result = model._prediction_(test_x,test_y)
 
+correction_result = model._correction_(test_x,test_y)
+
 sub = pd.DataFrame()
 sub['Animal_name'] = test_name
 sub['Predict_Type'] = prediction_result
 sub['Origin_Type'] = test_y
+sub['Correct'] = correction_result
 
 print(sub)
